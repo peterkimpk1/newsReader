@@ -4,8 +4,13 @@
     margin-top: 2em;
     align-items: center;
     justify-content: center;
-    h2 {
+    h2, h1{
         text-align: center;
+    }
+    input {
+        height: 1.2em;
+        width: 20em;
+        padding: .3em .5em;
     }
 }
 .categories-wrapper {
@@ -25,4 +30,9 @@
     button:hover {
         cursor: pointer;
     }
+}
+
+.filter-btn {
+    margin-left: 1em;
+    padding: .3em .5em;
 }

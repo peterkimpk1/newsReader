@@ -16,3 +16,7 @@
     border-left: 1px solid red;
     height: 120px;
 }
+.article-img {
+    object-fit: contain;
+    width: 100%;
+}

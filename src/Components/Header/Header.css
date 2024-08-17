@@ -4,11 +4,5 @@ nav {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    h1 {
-        text-align: center;
-    }
-    input {
-        height: 1.2em;
-        width: 20em;
-    }
+  
 }

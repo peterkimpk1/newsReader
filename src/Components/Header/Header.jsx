@@ -1,15 +1,14 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './Header.css'
-const Header = ({filterResult}) => {
-const [query, setQuery] = useState('')
+import { Link } from 'react-router-dom'
+const Header = () => {
+
   return (
     <nav>
-      <h1>News Reader</h1>
-      <label htmlFor='search'></label>
-      <div>
-        <input type='text' name='search' placeholder='Filter Articles' value={query} onChange={(e) => setQuery(e.target.value)}></input>
-        <button onClick={() => filterResult(query)}>Filter</button>
-      </div>
+        <Link to={'/'}>
+            <h1>News Reader</h1>
+        </Link>
+      
     </nav>
   )
 }

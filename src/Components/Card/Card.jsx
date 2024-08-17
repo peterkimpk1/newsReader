@@ -1,19 +1,19 @@
 import React from 'react'
 import './Card.css'
 import { NavLink } from 'react-router-dom'
-const Card = ({title, author, source, publishedAt, description}) => {
+const Card = ({id, title, author, source, publishedAt, description, urlToImage}) => {
   const publishDate = new Date(publishedAt)
   const options = {month: 'long', day: '2-digit', year: 'numeric'}
   const formattedDate = publishDate.toLocaleDateString('en-US', options)
   return (
-    <NavLink>
-      <div className='card'>
+    <NavLink to={`/detail/${id}`} >
+      <div className='card' key={id}>
           <div className='source-container'>
-            <p>{source.name}</p>
+            {urlToImage? <img className='article-img'src={urlToImage} alt=''/> : 'No image to show'}
           </div>
         <div className='card-info-wrapper'>
           <h3>{title}</h3>
-          <p>{author}&nbsp;&nbsp;&nbsp;&nbsp;{formattedDate}</p>
+          <p>{source.name}&nbsp;&nbsp;&nbsp;&nbsp;{author}&nbsp;&nbsp;&nbsp;&nbsp;{formattedDate}</p>
         </div>
       </div>
     </NavLink>

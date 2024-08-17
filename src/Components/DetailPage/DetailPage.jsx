@@ -1,11 +1,29 @@
 import React from 'react'
+import { useParams } from 'react-router-dom'
+import './DetailPage.css'
+const DetailPage = ({topArticles}) => {
+   const {id} = useParams()
+   const singleArticle = topArticles.find(article => article.id === id)
+   if (singleArticle) {
+    var {title, urlToImage, description, url, author, publishedAt, content} = singleArticle
+    const publishDate = new Date(publishedAt)
+    const options = {month: 'long', day: '2-digit', year: 'numeric'}
+    var formattedDate = publishDate.toLocaleDateString('en-US', options)
+   }
 
-const DetailPage = () => {
   return (
-    <div>
-      
-    </div>
+    <section className='detail-page-container'>
+        <div className='detail-info-wrapper'>
+            <h2>{title}</h2>
+            <p>Date: {formattedDate}</p>
+            {description ? <p>{description}</p> : <p>No description to show..</p>}
+            {urlToImage ? <p>{urlToImage}</p> : <p>No image to show..</p>}
+            <a href={url}>Link to Article</a>
+            {content? <p>{content}</p> : <p>No content to show..</p>}
+        </div>
+    </section>
   )
 }
 
 export default DetailPage
+//headline, image, date, content, source

@@ -3,10 +3,12 @@ import './CardContainer.css'
 import Card from '../Card/Card'
 import { v4 as uuidv4 } from 'uuid';
 const CardContainer = ({topArticles}) => {
-  const articleCards = topArticles.map(({title, author, urlToImage, publishedAt, description, source}) => {
+
+  const articleCards = topArticles.map(({key,id,title, author, urlToImage, publishedAt, description, source}) => {
     return (
       <Card
-      key={uuidv4()}
+      key={key}
+      id={id}
       title={title}
       author={author}
       urlToImage={urlToImage}
@@ -18,7 +20,7 @@ const CardContainer = ({topArticles}) => {
   })
   return (
     <div className='card-container'>
-      {articleCards}
+      {articleCards.length === 0 ? <h3 className='no-match-msg'>No matches shown..</h3> : articleCards}
     </div>
   )
 }
