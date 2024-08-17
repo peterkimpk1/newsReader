@@ -5,8 +5,17 @@
     text-align: center;
     justify-content: center;
     margin-left: 25%;
+    height: fit-content;
     .detail-info-wrapper {
         max-width: 100%;
     }
     border: 1px solid black;
+
+}
+.content {
+    line-height: 1.5;
+}
+.detail-img {
+    height: 100%;
+    width: 100%;
 }

@@ -30,7 +30,7 @@ const MainPage = ({topArticles,totalResults,toggleCategory, category, filterResu
             {topArticles.length > 20 && <Link to='/2'><button>2</button></Link>}
             {topArticles.length > 40 &&  <Link to='/3'><button>3</button></Link>}
             {topArticles.length > 60 && <Link to='/4'><button>4</button></Link>}
-            {topArticles.length > 80 && <Link to='/4'><button>5</button></Link>}
+            {topArticles.length > 80 && <Link to='/5'><button>5</button></Link>}
           </div>
         </div>
      </div>

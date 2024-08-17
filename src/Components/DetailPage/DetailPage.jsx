@@ -15,15 +15,14 @@ const DetailPage = ({topArticles}) => {
     <section className='detail-page-container'>
         <div className='detail-info-wrapper'>
             <h2>{title}</h2>
-            <p>Date: {formattedDate}</p>
+            <p>Author: {author}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Date: {formattedDate} </p>
             {description ? <p>{description}</p> : <p>No description to show..</p>}
-            {urlToImage ? <p>{urlToImage}</p> : <p>No image to show..</p>}
+            {urlToImage ? <img className='detail-img'src={urlToImage} alt=''/> : <p>No image to show..</p>}
             <a href={url}>Link to Article</a>
-            {content? <p>{content}</p> : <p>No content to show..</p>}
+            {content? <p className='content'>{content}</p> : <p>No content to show..</p>}
         </div>
     </section>
   )
 }
 
 export default DetailPage
-//headline, image, date, content, source
