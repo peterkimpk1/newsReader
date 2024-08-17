@@ -18,10 +18,11 @@
 - React, React Router, Cypress, JSX, CSS
 
 ### Screenshot of App
-![Screenshot]()
+![Screenshot](https://github.com/user-attachments/assets/ec7f728a-64d7-4a06-acf3-513bd6e921be)
 
-### Link to Project Board
-[Project Board](https://github.com/users/peterkimpk1/projects/8/views/1)
+### Project Board / Wireframe
+[Project Board](https://github.com/users/peterkimpk1/projects/8/views/1)<br>
+[Wireframe](https://github.com/user-attachments/assets/c9ce815e-2ff2-4b48-bdf3-cf935974d0ec)
 
 ### Reflections
 *Wins*
