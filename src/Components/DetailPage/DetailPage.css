@@ -1,0 +1,30 @@
+.detail-page-container {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-left: 25%;
+    height: fit-content;
+    .detail-info-wrapper {
+        max-width: 100%;
+    }
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 1em;
+
+}
+.content {
+    line-height: 1.5;
+}
+.detail-img {
+    height: 100%;
+    width: 100%;
+}
+
+@media only screen and (max-width: 400px) {
+    .detail-page-container {
+        min-width: 360px;
+        margin-left: 0;
+    }
+}

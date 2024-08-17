@@ -1,0 +1,40 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2em;
+    align-items: center;
+    justify-content: center;
+    min-width: 360px;
+    h2, h1{
+        text-align: center;
+    }
+    input {
+        height: 1.2em;
+        width: 20em;
+        padding: .3em .5em;
+    }
+
+}
+.categories-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+    label,select {
+        margin-left: 1em;
+    }
+}
+.btn-container {
+    margin-left: 1em;
+    button {
+        margin: .2em;
+        padding: .3em .5em;
+    }
+    button:hover {
+        cursor: pointer;
+    }
+}
+
+.filter-btn {
+    margin-left: 1em;
+    padding: .3em .5em;
+}
