@@ -12,22 +12,26 @@ function App() {
   const [topArticles, setTopArticles] = useState(data);
   const [totalResults, setTotalResults] = useState(0);
   const [category, setCategory] = useState('General');
-
-  // useEffect(() => {
-  //   getTopArticles(category)
-  //   .then(data => {
-  //     setTopArticles(data.articles)
-  //     setTotalResults(data.totalResults)
-  //     console.log(data)
-  // })
-  //   .catch(err => setError(err.message))
-  // },[category])
+  const [filterArticles, setFilteredArticles] = useState([])
+  useEffect(() => {
+    getTopArticles(category)
+    .then(data => {
+      setTopArticles(data.articles)
+      setFilteredArticles(data.articles)
+      setTotalResults(data.totalResults)
+  })
+    .catch(err => setError(err.message))
+  },[category])
   const toggleCategory = (category) => {
     setCategory(category)
   }
+  const filterResult = (query) => {
+    const result = filterArticles.filter(article => article.title.toLowerCase().includes(query))
+    setTopArticles(result)
+  }
   return (
     <div>
-      <Header/>
+      <Header filterResult={filterResult}/>
      {error && <p>{error}</p>}
      <Routes>
       <Route path='/' element={<MainPage topArticles={topArticles} totalResults={totalResults} toggleCategory={toggleCategory} category={category}/>}>

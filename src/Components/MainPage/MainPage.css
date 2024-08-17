@@ -17,5 +17,12 @@
     }
 }
 .btn-container {
-    display: flex;
+    margin-left: 1em;
+    button {
+        margin: .2em;
+        padding: .3em .5em;
+    }
+    button:hover {
+        cursor: pointer;
+    }
 }
