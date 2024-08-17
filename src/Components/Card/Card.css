@@ -1,0 +1,17 @@
+.card {
+    display: flex;
+    align-items: center;
+    border: 1px solid red;
+    min-height: 120px;
+}
+.source-container {
+    width: 8em;
+    /* border: 2px solid black; */
+    text-align: center;
+}
+.card-info-wrapper {
+    width: 45em;
+    padding-left: 1em;
+    border-left: 1px solid red;
+    height: 120px;
+}
