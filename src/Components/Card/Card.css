@@ -1,7 +1,8 @@
 .card {
     display: flex;
     align-items: center;
-    border: 1px solid red;
+    border-radius: 10px;
+    border: 1px solid black;
     min-height: 120px;
 }
 .source-container {

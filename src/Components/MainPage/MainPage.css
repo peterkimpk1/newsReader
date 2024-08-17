@@ -7,5 +7,15 @@
     h2 {
         text-align: center;
     }
-
+}
+.categories-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+    label,select {
+        margin-left: 1em;
+    }
+}
+.btn-container {
+    display: flex;
 }
