@@ -24,12 +24,12 @@ function App() {
       }).sort((a,b) => {
         return new Date(b.publishedAt) - new Date(a.publishedAt)
       })
-      console.log(articleWithIDs)
       setTopArticles(articleWithIDs)
       setFilteredArticles(articleWithIDs)
       setTotalResults(data.totalResults)
   })
-    .catch(err => setError(err.message))
+    .catch(err => {
+      setError(err.message)})
   },[category])
   const toggleCategory = (category) => {
     setCategory(category)
@@ -47,7 +47,7 @@ function App() {
      {error && <p>{error}</p>}
      <Routes>
       <Route path='/' element={<MainPage topArticles={topArticles} totalResults={totalResults} toggleCategory={toggleCategory} category={category} filterResult={filterResult}/>}>
-        <Route index element={<CardContainer topArticles={topArticles.slice(0,20)}/>}/>
+        <Route index element={<CardContainer topArticles={topArticles.slice(0,20)}/>}/> 
         <Route path='2' element={<CardContainer topArticles={topArticles.slice(20,40)}/>}/>
         <Route path='3' element={<CardContainer topArticles={topArticles.slice(41,60)}/>}/>
         <Route path='4' element={<CardContainer topArticles={topArticles.slice(61,80)}/>}/>

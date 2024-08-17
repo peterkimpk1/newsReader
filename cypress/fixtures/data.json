@@ -1,4 +1,4 @@
-export const data = [
+{"articles":[
     {
         "source": {
             "id": null,
@@ -1499,4 +1499,6 @@ export const data = [
         "key": "84104000-c696-4ff1-a832-6403bdc413ae",
         "id": "84104000-c696-4ff1-a832-6403bdc413ae"
     }
-]
+],
+"totalResults":"100"
+}

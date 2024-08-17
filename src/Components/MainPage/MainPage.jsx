@@ -15,11 +15,11 @@ const MainPage = ({topArticles,totalResults,toggleCategory, category, filterResu
     <>
       <div className='main'>
         <label htmlFor='search'></label>
-        <div>
+        <div className='search-wrapper'>
           <input type='text' name='search' placeholder='Filter Articles' value={query} onChange={(e) => setQuery(e.target.value)}></input>
           <button className='filter-btn'onClick={() => filterResult(query)}>Filter</button>
         </div>
-        <h2>{`List of ${topArticles.length} ${category} Articles in the US today`}</h2>
+        <h2>{`List of ${topArticles.length} ${category} Articles in the US`}</h2>
         <div className='categories-wrapper'>
           <label htmlFor='categories'>Choose a news category:</label>
           <select name='categories' id='categories' onChange={(e) => toggleCategory(e.target.value)}>

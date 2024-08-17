@@ -4,10 +4,13 @@
     border-radius: 10px;
     border: 1px solid black;
     min-height: 120px;
+    margin: 10px 0 10px 0;
+}
+.card-title {
+    margin-top: 10px;
 }
 .source-container {
     width: 8em;
-    /* border: 2px solid black; */
     text-align: center;
 }
 .card-info-wrapper {
@@ -18,4 +21,44 @@
 .article-img {
     object-fit: contain;
     width: 100%;
+}
+
+@media only screen and (max-width: 1045px) {
+    .card-title {
+        font-size: 1em;
+    }
+    .card-info-wrapper p {
+        font-size: .8em;
+    }
+}
+@media only screen and (max-width: 650px) {
+    .source-container {
+        width: 5em;
+    }
+    .card-title {
+        font-size: .9em;
+    }
+    .card-info-wrapper p {
+        font-size: .7em;
+    }
+    .card-container {
+        width: 100%;
+        margin-left: 0;
+        min-width: 370px;
+    }
+}
+@media only screen and (max-width: 510px) {
+    input{
+        height: 1em;
+        width: 5em;
+    }
+    .categories-wrapper {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .search-wrapper {
+        min-width: 500px;
+        margin-left: 10em;
+    }
+
 }

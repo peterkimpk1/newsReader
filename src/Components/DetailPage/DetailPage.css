@@ -10,6 +10,8 @@
         max-width: 100%;
     }
     border: 1px solid black;
+    border-radius: 10px;
+    padding: 1em;
 
 }
 .content {
@@ -18,4 +20,11 @@
 .detail-img {
     height: 100%;
     width: 100%;
+}
+
+@media only screen and (max-width: 400px) {
+    .detail-page-container {
+        min-width: 360px;
+        margin-left: 0;
+    }
 }

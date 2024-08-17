@@ -4,5 +4,5 @@ nav {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-  
+    min-width: 360px;
 }

@@ -4,6 +4,7 @@
     margin-top: 2em;
     align-items: center;
     justify-content: center;
+    min-width: 360px;
     h2, h1{
         text-align: center;
     }
@@ -12,6 +13,7 @@
         width: 20em;
         padding: .3em .5em;
     }
+
 }
 .categories-wrapper {
     display: flex;

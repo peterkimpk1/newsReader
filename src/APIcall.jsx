@@ -7,7 +7,13 @@ export default function getTopArticles(category) {
         if (!resp.ok) {
             throw new Error ('Could not fetch')
         }
-        return resp.json()
+        if(resp.status === 200) {
+            return resp.json()
+        }
+       else {
+          return resp;
+        }
+        
         })
 }
 

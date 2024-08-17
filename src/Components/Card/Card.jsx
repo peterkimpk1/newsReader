@@ -12,7 +12,7 @@ const Card = ({id, title, author, source, publishedAt, description, urlToImage})
             {urlToImage? <img className='article-img'src={urlToImage} alt=''/> : 'No image to show'}
           </div>
         <div className='card-info-wrapper'>
-          <h3>{title}</h3>
+          <h3 className='card-title'>{title}</h3>
           <p>{source.name}&nbsp;&nbsp;&nbsp;&nbsp;{author}&nbsp;&nbsp;&nbsp;&nbsp;{formattedDate}</p>
         </div>
       </div>

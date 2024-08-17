@@ -15,7 +15,7 @@ const DetailPage = ({topArticles}) => {
     <section className='detail-page-container'>
         <div className='detail-info-wrapper'>
             <h2>{title}</h2>
-            <p>Author: {author}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Date: {formattedDate} </p>
+            <p>{author? `Author: ${author}` : 'No Author'}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Date: {formattedDate} </p>
             {description ? <p>{description}</p> : <p>No description to show..</p>}
             {urlToImage ? <img className='detail-img'src={urlToImage} alt=''/> : <p>No image to show..</p>}
             <a href={url}>Link to Article</a>
